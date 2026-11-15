@@ -127,7 +127,7 @@ export const NASA_IMAGE_CONFIGS: Record<NasaImageVariant, NasaImageMetadata> = {
     filter: 'contrast(1.16) brightness(0.9)',
     nasaId: "ARTIST'S CONCEPT",
     credit: "Artist's concept: NASA / SpaceX (Starship Human Landing System)",
-    caption: "Artist's concept of the Artemis Human Landing System operating in long-shadow grazing illumination near the Lunar South Pole',
+    caption: "Artist's concept of the Artemis Human Landing System operating in long-shadow grazing illumination near the Lunar South Pole",
     defaultTag: 'ARTEMIS III HLS · SOUTH POLE SURFACE OPS',
     tintGradient:
       'radial-gradient(circle at 85% 30%, rgba(245, 158, 11, 0.22), transparent 55%), linear-gradient(180deg, rgba(3,5,9,0.15) 0%, rgba(3,5,9,0.88) 100%)',
@@ -139,7 +139,7 @@ export const NASA_IMAGE_CONFIGS: Record<NasaImageVariant, NasaImageMetadata> = {
     filter: 'contrast(1.15) brightness(0.92)',
     nasaId: "ARTIST'S CONCEPT",
     credit: "Artist's concept: NASA / Axiom Space (Artemis III surface suits)",
-    caption: "Artist's concept of astronauts conducting geological science and volatile sampling in extreme polar lighting',
+    caption: "Artist's concept of astronauts conducting geological science and volatile sampling in extreme polar lighting",
     defaultTag: 'ARTEMIS III · POLAR SURFACE EVA',
     tintGradient:
       'linear-gradient(180deg, rgba(3,5,9,0.12) 0%, rgba(3,5,9,0.86) 100%)',
