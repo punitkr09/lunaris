@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --nasa-black: #030509;
+    --nasa-charcoal: #070b12;
+    --nasa-card: #0c111c;
+    --electric-blue: #38bdf8;
+    --electric-blue-deep: #2563eb;
+    --border-hairline: rgba(226, 232, 240, 0.11);
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  body {
+    background-color: #030509;
+    background-image: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.08) 0%, rgba(3, 5, 9, 0) 60%);
+    color: #f2f4f8;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  .font-mono {
+    font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.005em;
+  }
+}
+
+/* LUNARIS Deep-Space Navy & Lunar Silver Surface System */
+.nasa-card {
+  background: linear-gradient(180deg, rgba(12, 17, 28, 0.94) 0%, rgba(7, 10, 17, 0.98) 100%);
+  border: 1px solid rgba(226, 232, 240, 0.11);
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.92);
+}
+
+.nasa-card-interactive {
+  background: linear-gradient(180deg, rgba(12, 17, 28, 0.92) 0%, rgba(7, 10, 17, 0.97) 100%);
+  border: 1px solid rgba(226, 232, 240, 0.11);
+  transition: border-color 0.25s ease, transform 0.25s ease, background-color 0.25s ease;
+}
+
+.nasa-card-interactive:hover {
+  background: linear-gradient(180deg, rgba(16, 23, 38, 0.96) 0%, rgba(9, 13, 22, 0.99) 100%);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.lunaris-surface {
+  background: linear-gradient(180deg, rgba(13, 18, 29, 0.95) 0%, rgba(7, 10, 17, 0.98) 100%);
+  border: 1px solid rgba(226, 232, 240, 0.11);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.85);
+}
+
+.lunaris-surface-elevated {
+  background: linear-gradient(180deg, rgba(16, 22, 35, 0.96) 0%, rgba(8, 12, 20, 0.99) 100%);
+  border: 1px solid rgba(226, 232, 240, 0.14);
+  box-shadow: 0 28px 64px -20px rgba(0, 0, 0, 0.92);
+}
+
+.lunaris-surface-subtle {
+  background: rgba(13, 18, 28, 0.82);
+  border: 1px solid rgba(226, 232, 240, 0.08);
+}
+
+.lunaris-surface-amber {
+  background: linear-gradient(180deg, rgba(22, 19, 14, 0.94) 0%, rgba(8, 11, 18, 0.98) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.lunaris-glass {
+  background: rgba(6, 9, 16, 0.86);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.14);
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.88);
+}
+
+/* Large analytical panel surface (Feasibility Matrix, What-If Lab) */
+.lunaris-glass-panel {
+  background: linear-gradient(180deg, rgba(10, 15, 26, 0.94) 0%, rgba(5, 8, 14, 0.98) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.1);
+  box-shadow: 0 28px 70px -24px rgba(0, 0, 0, 0.95);
+}
+
+/* Visually hidden but available to assistive technology */
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* LUNARIS Clean Modern Eyebrow Label */
+.nasa-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #93c5fd;
+}
+
+.nasa-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background-color: #38bdf8;
+}
+
+.lunaris-index-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #e0f2fe;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* LUNARIS Accent Circle Icon Button */
+.nasa-red-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: #e0f2fe;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.group:hover .nasa-red-circle,
+.nasa-red-circle:hover {
+  background-color: #0284c7;
+  border-color: #38bdf8;
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+/* Subtle range input */
+input[type='range'] {
+  accent-color: #38bdf8;
+}
+
+/* Accessible focus ring */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+/* Custom refined scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030509;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
